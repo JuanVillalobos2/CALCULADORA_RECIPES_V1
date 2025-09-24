@@ -252,7 +252,7 @@ document.getElementById('btn-guardar').addEventListener('click', async () => {
   };
 
   try {
-    const url = 'https://script.google.com/macros/s/AKfycbxn8mQXCQwbR3wUpC7Ii-dX1126SBIoEx1SMS52FA0SjcL8YVqVKhb2bSKCgsbEk_cVqQ/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbznDRFCiwvX8h3wds788fVZ99A5wg12zizJnMUC9MHhreQzNie6U8hWpve9QKcKMgEbbw/exec';
     const response = await fetch(url, {
       method: 'POST',
       body: JSON.stringify(payload),
@@ -329,3 +329,4 @@ document.getElementById('btn-imprimir').addEventListener('click', async () => {
 
 // Cargar todo al inicio
 cargarDatos();
+
