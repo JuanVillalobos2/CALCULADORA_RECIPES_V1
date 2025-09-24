@@ -1,0 +1,165 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.calculator {
+  max-width: 500px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.calculator h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.field {
+  margin-bottom: 1.5rem;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+select:focus,
+input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+#principal-info {
+  font-size: 1.25rem;
+  color: #1e40af;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.results h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: #4a90e2;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 12px 12px 0 0;
+}
+
+tbody td {
+  padding: 0.6rem;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e9f4ff;
+}
+
+.grupo-par {
+  background-color: #e9f5ff;
+}
+
+.grupo-impar {
+  background-color: #fdf5e6;
+}
+
+.grupo-par th,
+.grupo-impar th {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #1f2937;
+  background-color: inherit;
+  border-top: 2px solid #ccc;
+}
+
+/* CONTENEDOR BOTONES */
+.botones-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* BOTONES */
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+button#btn-guardar {
+  background-color: #4a90e2;
+  color: white;
+}
+
+button#btn-guardar:hover {
+  background-color: #357abd;
+}
+
+button#btn-imprimir {
+  background-color: #10b981; /* verde */
+  color: white;
+}
+
+button#btn-imprimir:hover {
+  background-color: #0e9a6e;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .calculator, .calculator * {
+    visibility: visible;
+  }
+
+  .calculator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .botones-container {
+    display: none;
+  }
+
+  input, select {
+    border: none;
+    box-shadow: none;
+  }
+}
+

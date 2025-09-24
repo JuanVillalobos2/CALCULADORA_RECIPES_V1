@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora de Recetas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+</head>
+<body>
+  <div class="calculator">
+    <h1>Calculadora de Recetas</h1>
+
+    <div class="field">
+      <label for="plato-select">Selecciona un Plato:</label>
+      <select id="plato-select" placeholder="Buscar plato..."></select>
+    </div>
+
+    <div class="field">
+      <label>Ingrediente Principal:</label>
+      <div id="principal-info">
+        <span id="principal-nombre">—</span> — 
+        <span id="principal-unidad">—</span>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="cantidad-principal">Cantidad del Ingrediente Principal:</label>
+      <input id="cantidad-principal" type="number" min="0" step="any" placeholder="Ingresa cantidad" />
+    </div>
+
+    <div class="results">
+      <h2>Ingredientes para la Receta</h2>
+      <table id="resultado-tabla">
+        <thead>
+          <tr>
+            <th>Sub Receta</th>
+            <th>Insumo</th>
+            <th>Cantidad</th>
+            <th>Unidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí se insertarán los resultados -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="botones-container">
+      <button id="btn-guardar">Guardar Receta</button>
+      <button id="btn-imprimir">Imprimir PDF</button>
+    </div>
+  </div>
+
+  <!-- Librerías externas -->
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
